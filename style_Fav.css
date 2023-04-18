@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kanit", sans-serif;
+}
+body {
+  background: #749fe6;
+}
+
+.Home {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  bottom: 50px;
+  right: 50px;
+  border-radius: 50%;
+  border: none;
+  font-size: 50px;
+  color: rgb(0, 0, 0);
+}
+
+.Home i:hover {
+  cursor: pointer;
+}

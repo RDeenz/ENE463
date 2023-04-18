@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="./script.js"></script>
+    <title>Homepages</title>
+    <!-- Using Google Font ------------------------------------------------------------------------------------------>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Style sheet------------------------------------------------------------------------------------------------ -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Iconscout Link For Icons ---------------------------------------------------------------------------------------->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="select-btn">
+        <span>Select Country</span>
+        <i class="uil uil-angle-down"></i>
+      </div>
+      <div class="content">
+        <div class="search">
+          <i class="uil uil-search"></i>
+          <input spellcheck="false" type="text" placeholder="Search" />
+        </div>
+        <ul class="options"></ul>
+      </div>
+    </div>
+
+    <div class="favorite">
+      <button onclick="Toggle1()" id="btnh1" class="btn1">
+        <i class="uil uil-heart"></i>
+      </button>
+    </div>
+    <script>
+      //favorlite click------------------------------------------------------------------------------------
+      var btnvar1 = document.getElementById("btnh1");
+
+      function Toggle1() {
+        if (btnvar1.style.color == "red") {
+          btnvar1.style.color = "white";
+        } else {
+          btnvar1.style.color = "red";
+        }
+      }
+    </script>
+    <!-- Link to favorite page!------------------------------------------------------------------------- -->
+    <div class="homebot">
+      <button class="btnHome" onclick="document.location ='favorite_page.html'">
+        <i class="uil uil-home"></i>
+      </button>
+    </div>
+  </body>
+</html>

@@ -8,6 +8,51 @@ body {
   background: #749fe6;
 }
 
+.title {
+  display: flex;
+  justify-content: center;
+}
+
+.contrycontain {
+  display: flex;
+  justify-content: center;
+}
+.btn {
+  margin: 5px;
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  width: 150px;
+  cursor: pointer;
+}
+
+.data-line {
+  display: flex;
+  justify-content: center;
+}
+
+.data-block {
+  width: 200px;
+  margin: 10px;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+}
+
+h3 {
+  text-align: center;
+  margin-top: 0;
+}
+
+p {
+  margin-bottom: 0;
+}
+
 .Home {
   position: absolute;
   width: 70px;

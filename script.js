@@ -1,7 +1,8 @@
 const wrapper = document.querySelector(".wrapper"),
   selectBtn = wrapper.querySelector(".select-btn"),
   searchInp = wrapper.querySelector("input"),
-  options = wrapper.querySelector(".options");
+  options = wrapper.querySelector(".options"),
+  contents = wrapper.querySelector("content");
 
 let countries = [
   "Bangkok",
@@ -64,9 +65,18 @@ addCountry();
 
 function updateName(selectedLi) {
   searchInp.value = "";
-  addCountry(selectedLi.innerText);
+  addCountry(selectedLi.innerHTML);
   wrapper.classList.remove("active");
-  selectBtn.firstElementChild.innerText = selectedLi.innerText;
+  selectBtn.firstElementChild.innerHTML = selectedLi.innerHTML;
+  return selectedLi.innerHTML;
+}
+
+function clickNG() {
+  let selectCName = selectBtn.firstElementChild.innerHTML;
+  var url = "";
+  url = selectCName.replace(/\s/g, "").toLocaleLowerCase() + ".html";
+  window.location.href = url;
+  console.log(selectCName);
 }
 
 searchInp.addEventListener("keyup", () => {
@@ -78,7 +88,7 @@ searchInp.addEventListener("keyup", () => {
     })
     .map((data) => {
       let isSelected =
-        data == selectBtn.firstElementChild.innerText ? "selected" : "";
+        data == selectBtn.firstElementChild.innerHTML ? "selected" : "";
       return `<li onclick="updateName(this)" class="${isSelected}">${data}</li>`;
     })
     .join("");

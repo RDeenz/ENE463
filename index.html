@@ -4,7 +4,6 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="module" src="./script.js"></script>
     <title>Homepages</title>
     <!-- Using Google Font ------------------------------------------------------------------------------------------>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,11 +22,15 @@
       href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
     />
   </head>
+  <!-- <p id = "demo"></p> -->
   <body>
     <div class="wrapper">
       <div class="select-btn">
         <span>Select Country</span>
         <i class="uil uil-angle-down"></i>
+        <button class="searchBtn" onclick="clickNG()">
+          <i class="uil uil-search"></i>
+        </button>
       </div>
       <div class="content">
         <div class="search">
@@ -36,8 +39,9 @@
         </div>
         <ul class="options"></ul>
       </div>
-    </div>
-
+      <!-- <div class="search-btn"></div>
+    </div> -->
+    <script src="script.js"></script>
     <div class="favorite">
       <button onclick="Toggle1()" id="btnh1" class="btn1">
         <i class="uil uil-heart"></i>
